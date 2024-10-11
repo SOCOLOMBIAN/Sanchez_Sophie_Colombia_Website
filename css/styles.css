@@ -9,9 +9,12 @@ body{
     
     background-color: antiquewhite;
     background-image: url("../colo.jpg");
-    background-size: 200px;
-    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: black;
+    padding-top: relative;
+    padding-bottom: 400px 10;
     
 
 }
