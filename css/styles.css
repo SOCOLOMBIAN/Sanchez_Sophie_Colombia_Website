@@ -1,21 +1,21 @@
+/* Reset and base styles */
 body {
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: fantasy;
 }
 
 .header {
     background-image: url("../colo.jpg");
     background-size: cover;
     background-position: center;
-    height: 55vh; /* Reduced height */
+    height: 55vh;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Changed to align content towards bottom */
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding-bottom: 60px; /* Added padding to prevent text overlapping with menu */
 }
 
 .header::before {
@@ -33,34 +33,24 @@ body {
     z-index: 1;
 }
 
-.title, .subtitle {
+.title {
     position: relative;
     z-index: 2;
-}
-
-.title {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #FCD116; /* Colombian yellow */
+    color: #FCD116;
+    animation: fadeInUp 1s ease-out;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    color: white;
-    margin-bottom: 1rem; /* Reduced margin */
-}
-
-/* Navigation Menu Styling */
+/* Updated Menu Bar Styling */
 .nav-menu {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
     z-index: 2;
-    padding: 8px 0;
-    margin: 0;
+    width: 100%;
+    background: linear-gradient(to right, #FCD116 33.33%, #003893 33.33% 66.66%, #CE1126 66.66%);
+    padding: 0;
+    margin-top: 0;
 }
 
 .menu-list {
@@ -68,46 +58,56 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Slightly reduced gap */
+    justify-content: stretch;
+    align-items: stretch;
+    height: 100%;
 }
 
 .menu-item {
     position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .menu-btn {
-    background: none;
-    border: 2px solid transparent;
+    background: transparent;
+    border: none;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 12px 0px;
+    width: 100%;
     transition: all 0.3s ease;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+    font-family: fantasy;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
+/* Hover effects */
 .menu-btn:hover {
-    color: #FCD116;
-    border-color: #FCD116;
-    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
-/* Dropdown Styling */
+/* Enhanced Dropdown Styling */
 .dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 300px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 4px;
     overflow: hidden;
-    margin-top: 8px;
+    margin-top:0;
+    z-index: 1000;
+   
 }
 
 .menu-item:hover .dropdown {
@@ -122,58 +122,21 @@ body {
     display: block;
     transition: all 0.3s ease;
     text-align: center;
+    font-size: 0.9rem;
 }
 
-.dropdown a:hover {
-    background-color: #FCD116;
-    color: black;
-}
+/* Matching dropdown hover colors */
+.menu-item:nth-child(1) .dropdown a:hover { background-color: #FCD116; color: black; }
+.menu-item:nth-child(2) .dropdown a:hover { background-color: #003893; }
+.menu-item:nth-child(3) .dropdown a:hover { background-color: #CE1126; }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes dropdownFadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-.title {
-    animation: fadeInUp 1s ease-out;
-}
-
-.subtitle {
-    animation: fadeInUp 1s ease-out 0.5s;
-    animation-fill-mode: both;
-}
-
-/* Ripple effect */
-.ripple {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 1s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
+    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }

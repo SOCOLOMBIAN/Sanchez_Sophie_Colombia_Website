@@ -1,29 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.header');
-    const menuBtns = document.querySelectorAll('.menu-btn');
+    const nav = document.querySelector('.nav-menu');
+    let lastScrollTop = 0;
 
-    // Subtle parallax effect for header background
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        header.style.backgroundPositionY = scrollTop * 0.3 + 'px'; // Reduced parallax effect
-    });
-
-    // Add click effect to menu buttons
-    menuBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            let ripple = document.createElement('span');
-            ripple.classList.add('ripple');
-            this.appendChild(ripple);
-            
-            let x = e.clientX - e.target.offsetLeft;
-            let y = e.clientY - e.target.offsetTop;
-            
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 1000);
-        });
+        
+        if (scrollTop > lastScrollTop) {
+            nav.style.transform = 'translateY(-100%)';
+        } else {
+            nav.style.transform = 'translateY(0)';
+        }
+        
+        if (scrollTop === 0) {
+            nav.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+        } else {
+            nav.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        }
+        
+        lastScrollTop = scrollTop;
     });
 });
