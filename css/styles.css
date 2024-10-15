@@ -1,4 +1,3 @@
-/* Reset and base styles */
 body {
     margin: 0;
     font-family: fantasy;
@@ -8,7 +7,7 @@ body {
     background-image: url("../colo.jpg");
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 40vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -43,6 +42,7 @@ body {
     animation: fadeInUp 1s ease-out;
 }
 
+ 
 /* Updated Menu Bar Styling */
 .nav-menu {
     position: relative;
@@ -139,4 +139,90 @@ body {
 @keyframes dropdownFadeIn {
     from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
     to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.home-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.home-icon:hover {
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+footer {
+    background-color: #003366; /* Deep navy color */
+    color: white;
+    padding: 20px 10px; /* Reduced padding for a more compact feel */
+    text-align: center;
+    font-family: 'Verdana', sans-serif; /* Changed to a more modern font */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.footer-section {
+    flex-basis: calc(33.333% - 20px);
+    margin: 10px; /* Reduced margin between sections */
+    text-align: center;
+    padding: 20px; /* Reduced inner padding for sections */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.footer-section:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.footer-section h3 {
+    margin-bottom: 15px; /* Reduced margin for headings */
+    font-size: 1.25rem; /* Smaller font size for headings */
+    border-bottom: 2px solid #ffdd57; /* Highlighted underline */
+    padding-bottom: 5px; /* Spacing below heading */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Reduced margin for list items */
+}
+
+.footer-section a {
+    color: #ffdd57; /* Soft gold color for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-section a:hover {
+    color: #ffffff; /* Change to white on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px; /* Reduced margin for separation */
+    padding-top: 5px; /* Reduced padding */
+    font-size: 0.8rem; /* Smaller font size for copyright text */
+    border-top: 4px solid #ffdd57; /* Lighter border for contrast */
+    opacity: 0.8; /* Slightly transparent for elegance */
 }
