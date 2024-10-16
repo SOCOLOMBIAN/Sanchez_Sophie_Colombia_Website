@@ -42,8 +42,6 @@ body {
     animation: fadeInUp 1s ease-out;
 }
 
- 
-/* Updated Menu Bar Styling */
 .nav-menu {
     position: relative;
     z-index: 2;
@@ -166,7 +164,7 @@ footer {
     color: white;
     padding: 20px 10px; /* Reduced padding for a more compact feel */
     text-align: center;
-    font-family: 'Verdana', sans-serif; /* Changed to a more modern font */
+    font-family: fantasy; /* Changed to a more modern font */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
@@ -225,4 +223,31 @@ footer {
     font-size: 0.8rem; /* Smaller font size for copyright text */
     border-top: 4px solid #ffdd57; /* Lighter border for contrast */
     opacity: 0.8; /* Slightly transparent for elegance */
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 500px;
+    text-align: center;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 14px;
 }
