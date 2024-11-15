@@ -33,11 +33,6 @@ body {
     text-align: center;
     animation: headerZoom 20s infinite alternate;
 }
-@keyframes headerZoom {
-    0% { background-size: 100% auto; }
-    100% { background-size: 110% auto; }
-}
-
 /* text and image of the principal page*/
 .header::before {
     content: '';
@@ -64,12 +59,6 @@ body {
                  0 0 20px rgba(252, 209, 22, 0.3);
     color: #FCD116;
     animation: fadeInUp 2s ease-out, glowPulse 5s infinite;
-}
-
-@keyframes glowPulse {
-    0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(252, 209, 22, 0.3); }
-    50% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 30px rgba(252, 209, 22, 0.5); }
-    100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(252, 209, 22, 0.3); }
 }
 
 /* navigation menu*/
@@ -162,18 +151,7 @@ body {
 .menu-item:nth-child(2) .dropdown a:hover { background-color: #003893; }
 .menu-item:nth-child(3) .dropdown a:hover { background-color: #CE1126; }
 
-/* Animations */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes dropdownFadeIn {
-    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-/* style for the content  */
+/* style for the content of the home page */
 #main-content {
     max-width: 900px;
     margin: 0 auto;
@@ -245,7 +223,7 @@ section {
 }
 
 .gallery-item p {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     color: #2c3e50;
     margin-top: 15px;
     font-weight: 500;
@@ -301,29 +279,6 @@ section {
     
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #main-content {
-        padding: 20px;
-    }
-
-    section {
-        margin: 30px 0;
-    }
-
-    #purpose, #history-of-colombia {
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 1.8rem !important;
-    }
-
-    p {
-        font-size: 1rem !important;
-    }
-}
-
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -364,28 +319,6 @@ section {
     text-align: center;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 1200px) {
-    .gallery-container {
-        max-width: 95%; /* More responsive width */
-        gap: 30px;
-    }
-    
-    .gallery-item img {
-        height: 500px; /* Slightly smaller for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .gallery-item img {
-        height: 400px; /* Adjusted for mobile */
-    }
-}
 
 .home-icon {
     position:fixed;
@@ -407,6 +340,18 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 } 
+
+#enjoy h2 {
+    font-size: 1.9rem;
+    color: #003893;  /* Colombian blue */
+    margin-top: 1px;
+    margin-bottom: 30px;
+    position:relative;
+    text-align: center;
+    letter-spacing: 20px; display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
 
 /* rigths of the website  */
 footer {
@@ -464,6 +409,182 @@ html{
     scroll-behavior: smooth;
 }
 
+/* organization of the pacific coast*/
+
+#pacific-coast  h2 {
+    font-size: 3.1rem;
+    font-weight: 2px;
+    font-family: zilla slab;
+    color: #003893;  /* Colombian blue */
+    margin-top: 45px;
+    margin-bottom: 30px;
+    position:relative;
+    text-align: center;
+    letter-spacing: 10px; display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+#pacific-coast  p{
+    font-size: 1.1rem;
+    line-height: 1.0;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+/* image of the map*/
+.map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 10vh;
+    width: 100%;
+    padding-top: 0;
+    box-sizing:border-box;
+}
+
+.map-image {
+    max-width: 90%;
+    height: auto;
+    display:block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.map-image:hover {
+    transform: scale(1.1);
+}
+
+.map-container p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.pacific-image{
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 40px auto;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animations*/
+
+@media (max-width: 768px) {
+    .map-container {
+        padding: 10px;
+    }
+    
+    .map-image,
+    .pacific-image {
+        max-width: 95%;
+    }
+}
+
+
+
+@keyframes headerZoom {
+    0% { background-size: 100% auto; }
+    100% { background-size: 110% auto; }
+}
+
+}
+
+@keyframes glowPulse {
+    0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(252, 209, 22, 0.3); }
+    50% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 30px rgba(252, 209, 22, 0.5); }
+    100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(252, 209, 22, 0.3); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #main-content {
+        padding: 20px;
+    }
+
+    section {
+        margin: 30px 0;
+    }
+
+    #purpose, #history-of-colombia {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .gallery-container {
+        max-width: 95%; /* More responsive width */
+        gap: 30px;
+    }
+    
+    .gallery-item img {
+        height: 500px; /* Slightly smaller for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .gallery-item img {
+        height: 400px; /* Adjusted for mobile */
+    }
+}

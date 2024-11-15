@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav-menu');
     let lastScrollTop = 0;
@@ -19,4 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollTop = scrollTop;
     });
-});
+}); 
