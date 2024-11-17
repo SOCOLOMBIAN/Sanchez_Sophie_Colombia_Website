@@ -1,14 +1,21 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* writting parts of the text and appareance of the background*/
 body {
     margin: 0;
+    padding:0;
     font-family: zilla slab;
     background: linear-gradient(
         135deg,
         rgb(187, 203, 238) 0%,
         #bcd9f7 100%
     );
-    background-image: 
-    lineal-gradient(
+    background-image: lineal-gradient(
         -45deg,
         rgba(0, 56, 147, 0.01) 0%,
         rgba(0, 56, 147, 0.01) 50%,
@@ -25,14 +32,30 @@ body {
     background-size: cover;
     background-position: center;
     height: 35vh;
+    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0;
+    padding:0;
     animation: headerZoom 20s infinite alternate;
+    top:1;
 }
+
+@keyframes headerZoom {
+    0% {
+     background-size: 100% cover;
+     transform: scale(1);
+    }
+    100% {
+     background-size: 110% cover; 
+     transform: scale(1.1);
+    }
+}
+
 /* text and image of the principal page*/
 .header::before {
     content: '';
@@ -153,25 +176,31 @@ body {
 
 /* style for the content of the home page */
 #main-content {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 5px 10px;
+    position:relative;
 }
 
 section {
-    margin: 100px 0;
+    margin: 50px 0;
     text-align: center;
+    width: 100%; 
+    position: relative;
 }
 
 /* typography for sections */
 #purpose {
     background: rgba(250, 241, 186, 0.9);
-    padding: 15 30px;
-    border: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 10);
+    padding: 30px; 
+    border-radius: 5px;  
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  
     margin: 70px auto;
     max-width: 1200px;
-    height: 200px;
+    min-height: 200px; 
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;
     
 }
 
@@ -179,7 +208,7 @@ section {
 #purpose h2 {
     font-size: 2.2rem;
     color: #003893;  /* Colombian blue */
-    margin-top: 2px;
+    margin-top: 0;
     margin-bottom: 25px;
     position: relative;
 }
@@ -197,7 +226,7 @@ section {
 /*purpose text information */
 #purpose p {
     font-size: 1.1rem;
-    line-height: 1.0;
+    line-height: 1.6;
     color: #2c3e50;
     margin-bottom: 20px;
     padding: 0 30px;
@@ -286,6 +315,7 @@ section {
     max-width:1400px;
     margin: 0 auto;
     padding:30px;
+    box-sizing: border-box; 
 }
 
 .gallery-item {
@@ -360,7 +390,11 @@ footer {
     padding: 20px 10px; /* Reduced padding for a more compact feel */
     text-align: center;
     font-family: zilla slab; 
+    width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-content {
@@ -398,9 +432,10 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 10px; 
+    margin-top:10px; 
     padding-top: 5px; 
     font-size: 0.8rem; 
+    width: 100%;
     border-top: 2px solid #ffdd57; 
 
 }
@@ -411,58 +446,85 @@ html{
 
 /* organization of the pacific coast*/
 
-#pacific-coast  h2 {
+#pacific-coast {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 15px;
+    border-radius: 15px;
+   
+} 
+
+/* pacific coast section title*/
+#pacific-coast h2 {
     font-size: 3.1rem;
-    font-weight: 2px;
-    font-family: zilla slab;
-    color: #003893;  /* Colombian blue */
-    margin-top: 45px;
-    margin-bottom: 30px;
-    position:relative;
+    font-weight: 700;
+    font-family: 'zilla slab';
+    color: #003893;
+    margin: 80px 0 30px;
+    position: relative;
     text-align: center;
-    letter-spacing: 10px; display: flex;
-    justify-content: center;  
-    align-items: center; 
+    letter-spacing: 10px;
+    text-transform: uppercase;
 }
 
-#pacific-coast  p{
-    font-size: 1.1rem;
-    line-height: 1.0;
+/* Title Underline Effect */
+#pacific-coast h2::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 4px;
+    background: linear-gradient(to right, #FCD116, #003893);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Paragraph Text in the Pacific Coast Section */
+#pacific-coast p {
+    font-size: 1.2rem;
+    line-height: 1.5;
     color: #2c3e50;
-    margin-bottom: 20px;
-    padding: 0 30px;
+    margin-bottom: 30px;
+    padding: 0 40px;
+    text-align: justify;
 }
 
 /* image of the map*/
 .map-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    min-height: 10vh;
+    min-height: 20vh;
     width: 100%;
-    padding-top: 0;
-    box-sizing:border-box;
+    padding: 30px 0;
+    position: relative;
+    margin-bottom: 40px; 
 }
 
 .map-image {
-    max-width: 90%;
+    max-width: 85%;
     height: auto;
     display:block;
     margin: 0 auto;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out;
 }
 
 .map-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);   
 }
 
 .map-container p {
     font-size: 1.2rem;
     color: #2c3e50;
     margin-top: 10px;
-    font-weight: 500;
+    font-weight: 500px;
     text-align: center;
+    padding:15px;
+    background: rgba(252, 209, 22, 0.1);
+    border-radius: 8px;
+    width:fit-content;
+
 }
 
 .pacific-image{
@@ -472,8 +534,105 @@ html{
     margin: 40px auto;
 }
 
+body {
+    font-family: zilla slab;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
 
+.region {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+.region-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+}
+
+.destination {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    gap: 30px;
+}
+
+.destination:last-child {
+    margin-bottom: 0;
+}
+
+.destination-info {
+    flex: 1;
+}
+
+.destination-image {
+    width: 300px;
+    height: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-image img:hover {
+    transform: scale(1.05);
+}
+
+.destination-title {
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.activities {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #2ecc71;
+}
+
+.activities h4 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.activities ul {
+    list-style-position: inside;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .destination {
+        flex-direction: column;
+    }
+
+    .destination-image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+}
 
 
 
@@ -516,14 +675,6 @@ html{
     }
 }
 
-
-
-@keyframes headerZoom {
-    0% { background-size: 100% auto; }
-    100% { background-size: 110% auto; }
-}
-
-}
 
 @keyframes glowPulse {
     0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(252, 209, 22, 0.3); }
