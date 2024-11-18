@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hola,Colombia</title>
+    <link rel="stylesheet" href="css/styles.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> 
+    </head>
+    <body>
+
+        <a href="index.html" class="home-icon" aria-label="Return to home page">
+            <i class="fas fa-home"></i>
+        </a>
+    
+       <div class="header" id="header">
+         <h1 class="title">Hola Colombia</h1> 
+     </div>
+    <nav class="nav-menu">
+        <ul class="menu-list">
+           <li class="menu-item">
+           <button class="menu-btn">Destinations</button>
+           <div class="dropdown">
+              <a href="pacific.html"> Pacific</a>
+              <a href="Caribean.html">Caribean</a>
+              <a href="Amazon.html">Amazon</a>
+              <a href="Andean.html">Andean</a>
+        </div> 
+        </li>
+            <li class="menu-item">
+            <button class="menu-btn">Trip Ideas</button>
+            <div class="dropdown">
+              <a href="7.html"> 7 days </a>
+              <a href="10.html"> 10 days </a>
+        </div>
+        </li>
+            <li class="menu-item">
+                <button class="menu-btn">Explore</button>
+                <div class="dropdown">
+                <a href="security.html"> Security</a>
+                <a href="transportation.html"> Public transportation </a>
+                </div>
+            </li>
+          </ul>
+      </nav>
+
+
+      <main id=" Amazon Region">
+        <h2>Security information</h2>
+
+
+    <main class="security-content">
+        <section class="emergency-contacts">
+            <h2><i class="fas fa-phone-alt"></i> Emergency Contacts</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Police</h3>
+                    <p class="phone">123</p>
+                    <a href="https://www.policia.gov.co/" class="link-button" target="_blank">Official Website</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Ambulance</h3>
+                    <p class="phone">125</p>
+                    <a href="https://www.minsalud.gov.co/" class="link-button" target="_blank">Health Ministry</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Tourist Police</h3>
+                    <p class="phone">+57 1 3374413</p>
+                    <a href="https://www.colombia.co/en/tourism/" class="link-button" target="_blank">Tourism Info</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="safe-areas">
+            <h2><i class="fas fa-map-marked-alt"></i> Safe Areas by City</h2>
+            <div class="city-grid">
+                <div class="city-card" onclick="toggleInfo('bogota')">
+                    <img src="images/bogota.jpg" alt="Bogotá">
+                    <h3>Bogotá</h3>
+                    <div class="city-info" id="bogota">
+                        <ul>
+                            <li>Zona T - Shopping and dining district</li>
+                            <li>Usaquén - Historic neighborhood</li>
+                            <li>La Candelaria (during daytime)</li>
+                            <li>Parque 93</li>
+                        </ul>
+                        <a href="#" class="read-more">Learn More about Bogotá</a>
+                    </div>
+                </div>
+                <!-- Add similar cards for Medellín, Cartagena, Cali -->
+            </div>
+        </section>
+
+        <section class="safety-tips">
+            <h2><i class="fas fa-shield-alt"></i> Essential Safety Tips</h2>
+            <div class="tips-accordion">
+                <div class="tip-item">
+                    <button class="accordion-btn" onclick="toggleAccordion(this)">
+                        Transportation Safety
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="tip-content">
+                        <ul>
+                            <li>Use official taxi services or ride-sharing apps</li>
+                            <li>Avoid unmarked taxis</li>
+                            <li>Keep valuables out of sight during transit</li>
+                            <li>Use trusted transport companies for inter-city travel</li>
+                        </ul>
+                        <a href="transportation.html" class="link-button">View Transportation Guide</a>
+                    </div>
+                </div>
+                <!-- Add more accordion items for: Personal Safety, Accommodation Safety, etc. -->
+            </div>
+        </section>
+
+        <section class="travel-insurance">
+            <h2><i class="fas fa-heart"></i> Travel Insurance</h2>
+            <div class="insurance-content">
+                <p>We recommend getting comprehensive travel insurance for your trip to Colombia.</p>
+                <div class="insurance-links">
+                    <a href="#" class="provider-link">World Nomads</a>
+                    <a href="#" class="provider-link">SafetyWing</a>
+                    <a href="#" class="provider-link">Allianz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hola Colombia. All rights reserved</p>
+    </footer>
+
+    <script src="js/security.js"></script>
+</body>
+</html>

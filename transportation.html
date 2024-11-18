@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Colombia - Transportation</title>
+    <link rel="stylesheet" href="css/styles.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> 
+</head>
+<body>
+    <a href="index.html" class="home-icon" aria-label="Return to home page">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <div class="header" id="header">
+        <h1 class="title">Hola Colombia</h1> 
+    </div>
+
+    <nav class="nav-menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <button class="menu-btn">Destinations</button>
+                <div class="dropdown">
+                    <a href="pacific.html">Pacific</a>
+                    <a href="Caribean.html">Caribbean</a>
+                    <a href="Amazon.html">Amazon</a>
+                    <a href="Andean.html">Andean</a>
+                </div> 
+            </li>
+            <li class="menu-item">
+                <button class="menu-btn">Trip Ideas</button>
+                <div class="dropdown">
+                    <a href="7.html">7 days</a>
+                    <a href="10.html">10 days</a>
+                </div>
+            </li>
+            <li class="menu-item">
+                <button class="menu-btn">Explore</button>
+                <div class="dropdown">
+                    <a href="security.html">Security</a>
+                    <a href="transportation.html">Public transportation</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <main class="transportation-content">
+        <section class="quick-tips">
+            <div class="tip-card">
+                <i class="fas fa-clock"></i>
+                <h3>Best Times</h3>
+                <p>Avoid rush hours: 6-9 AM & 4:30-7:30 PM</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Payment</h3>
+                <p>Most systems require prepaid cards</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Apps</h3>
+                <p>Download local transport apps</p>
+            </div>
+        </section>
+
+        <section class="currency-converter">
+            <h2><i class="fas fa-money-bill-wave"></i> Currency Converter</h2>
+            <div class="converter-widget">
+                <div class="input-group">
+                    <div class="amount-input">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount">
+                    </div>
+                    <div class="currency-select">
+                        <label for="fromCurrency">From</label>
+                        <select id="fromCurrency">
+                            <option value="COP">Colombian Peso (COP)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                        </select>
+                    </div>
+                    <div class="currency-select">
+                        <label for="toCurrency">To</label>
+                        <select id="toCurrency">
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="COP">Colombian Peso (COP)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                        </select>
+                    </div>
+                </div>
+                <button onclick="convertCurrency()" class="convert-btn">
+                    <i class="fas fa-exchange-alt"></i> Convert
+                </button>
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+
+        <section class="transport-options">
+            <h2><i class="fas fa-bus"></i> Public Transportation</h2>
+            
+            <div class="transport-tabs">
+                <button class="tab-btn active" onclick="openTransport(event, 'buses')">
+                    <i class="fas fa-bus"></i>
+                    City Buses
+                </button>
+                <button class="tab-btn" onclick="openTransport(event, 'metro')">
+                    <i class="fas fa-train"></i>
+                    Metro
+                </button>
+                <button class="tab-btn" onclick="openTransport(event, 'taxis')">
+                    <i class="fas fa-taxi"></i>
+                    Taxis
+                </button>
+                <button class="tab-btn" onclick="openTransport(event, 'flights')">
+                    <i class="fas fa-plane"></i>
+                    Flights
+                </button>
+            </div>
+
+            <div id="buses" class="transport-content active">
+                <div class="city-transport-grid">
+                    <div class="transport-card">
+                        <div class="card-header">
+                            <img src="images/transmilenio.jpg" alt="TransMilenio">
+                            <h3>TransMilenio (Bogotá)</h3>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h4>Hours</h4>
+                                <p>Monday-Sunday: 4:30 AM - 11:00 PM</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Fares</h4>
+                                <p>2,950 COP per trip</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Coverage</h4>
+                                <p>113 stations across Bogotá</p>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <span class="feature"><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span class="feature"><i class="fas fa-wheelchair"></i> Accessible</span>
+                            <span class="feature"><i class="fas fa-map"></i> Real-time tracking</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://www.transmilenio.gov.co/" class="link-button" target="_blank">
+                                <i class="fas fa-globe"></i> Official Website
+                            </a>
+                            <a href="#" class="link-button route-map">
+                                <i class="fas fa-map-marked-alt"></i> Route Map
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="card-header">
+                            <img src="images/mio.jpg" alt="MIO Cali">
+                            <h3>MIO (Cali)</h3>
+                        </div>
+                        <!-- Similar structure as TransMilenio card -->
+                    </div>
+
+                    <!-- Add more city transport cards -->
+                </div>
+            </div>
+
+            <div id="metro" class="transport-content">
+                <div class="metro-system">
+                    <div class="system-header">
+                        <img src="images/medellin-metro.jpg" alt="Medellín Metro">
+                        <h3>Medellín Metro</h3>
+                    </div>
+                    <div class="metro-info">
+                        <div class="schedule-rates">
+                            <h4>Operating Hours & Rates</h4>
+                            <!-- Metro details -->
+                        </div>
+                        <div class="metro-map">
+                            <h4>System Map</h4>
+                            <!-- Interactive map -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Similar detailed sections for taxis and flights -->
+        </section>
+
+        <section class="transport-tips">
+            <h2><i class="fas fa-info-circle"></i> Essential Travel Tips</h2>
+            <div class="tips-carousel">
+                <div class="tip-slides">
+                    <div class="tip-slide active">
+                        <div class="tip-content">
+                            <h3>Getting Transport Cards</h3>
+                            <div class="card-types">
+                                <div class="card-type">
+                                    <img src="images/tullave.jpg" alt="Tu Llave Card">
+                                    <h4>Tu Llave - Bogotá</h4>
+                                    <ul>
+                                        <li>Available at all TransMilenio stations</li>
+                                        <li>Initial cost: 5,000 COP</li>
+                                        <li>Minimum reload: 2,000 COP</li>
+                                    </ul>
+                                </div>
+                                <!-- More card types -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More tip slides -->
+                </div>
+                <div class="carousel-controls">
+                    <button onclick="prevSlide()" class="control-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slide-indicators">
+                        <!-- Indicators added by JavaScript -->
+                    </div>
+                    <button onclick="nextSlide()" class="control-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="transport-apps">
+            <h2><i class="fas fa-mobile-alt"></i> Recommended Apps</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <img src="images/moovit.jpg" alt="Moovit">
+                    <h3>Moovit</h3>
+                    <p>Real-time public transport tracking</p>
+                    <div class="app-links">
+                        <a href="#" class="app-store"><i class="fab fa-apple"></i></a>
+                        <a href="#" class="play-store"><i class="fab fa-google-play"></i></a>
+                    </div>
+                </div>
+                <!-- More app cards -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hola Colombia. All rights reserved</p>
+    </footer>
+
+    <script src="js/transportation.js"></script>
+</body>
+</html>
