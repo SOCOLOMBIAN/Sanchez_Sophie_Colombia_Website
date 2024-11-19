@@ -45,10 +45,6 @@
       </nav>
 
 
-      <main id=" Amazon Region">
-        <h2>Security information</h2>
-
-
     <main class="security-content">
         <section class="emergency-contacts">
             <h2><i class="fas fa-phone-alt"></i> Emergency Contacts</h2>
@@ -71,31 +67,11 @@
             </div>
         </section>
 
-        <section class="safe-areas">
-            <h2><i class="fas fa-map-marked-alt"></i> Safe Areas by City</h2>
-            <div class="city-grid">
-                <div class="city-card" onclick="toggleInfo('bogota')">
-                    <img src="images/bogota.jpg" alt="Bogotá">
-                    <h3>Bogotá</h3>
-                    <div class="city-info" id="bogota">
-                        <ul>
-                            <li>Zona T - Shopping and dining district</li>
-                            <li>Usaquén - Historic neighborhood</li>
-                            <li>La Candelaria (during daytime)</li>
-                            <li>Parque 93</li>
-                        </ul>
-                        <a href="#" class="read-more">Learn More about Bogotá</a>
-                    </div>
-                </div>
-                <!-- Add similar cards for Medellín, Cartagena, Cali -->
-            </div>
-        </section>
-
         <section class="safety-tips">
-            <h2><i class="fas fa-shield-alt"></i> Essential Safety Tips</h2>
+            <h2 class="section-title"><i class="fas fa-shield-alt"></i> Essential Safety Tips</h2>
             <div class="tips-accordion">
                 <div class="tip-item">
-                    <button class="accordion-btn" onclick="toggleAccordion(this)">
+                    <button class="accordion-btn">
                         Transportation Safety
                         <i class="fas fa-chevron-down"></i>
                     </button>
@@ -106,10 +82,41 @@
                             <li>Keep valuables out of sight during transit</li>
                             <li>Use trusted transport companies for inter-city travel</li>
                         </ul>
-                        <a href="transportation.html" class="link-button">View Transportation Guide</a>
+                        <a href="https://practicalwanderlust.com/guide-to-transportation-in-colombia/" class="link-button">View Transportation Guide</a>
                     </div>
                 </div>
-                <!-- Add more accordion items for: Personal Safety, Accommodation Safety, etc. -->
+                
+                <div class="tip-item">
+                    <button class="accordion-btn">
+                        Personal Safety
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="tip-content">
+                        <ul>
+                            <li>Stay aware of your surroundings at all times</li>
+                            <li>Keep emergency contacts easily accessible</li>
+                            <li>Avoid displaying valuable items in public</li>
+                            <li>Use ATMs inside banks or shopping centers</li>
+                        </ul>
+                        <a href="https://travel.gc.ca/destinations/colombia" class="link-button">Personal Safety Guide</a>
+                    </div>
+                </div>
+        
+                <div class="tip-item">
+                    <button class="accordion-btn">
+                        Accommodation Safety
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="tip-content">
+                        <ul>
+                            <li>Book accommodations in safe, well-reviewed areas</li>
+                            <li>Always lock doors and windows</li>
+                            <li>Keep valuable items in the room safe</li>
+                            <li>Have emergency numbers readily available</li>
+                        </ul>
+                        <a href="https://www.booking.com/placestostay/country/co.en-gb.html?aid=356980&label=gog235jc-1DCAIY6gcoggI46AdIM1gDaCeIAQGYAQm4AQfIAQzYAQPoAQGIAgGoAgO4AtH78rkGwAIB0gIkNTdhYmFkMDctZTBmNi00MjgyLTgwY2MtNWJiMGMwZDkzMTEy2AIE4AIB&sid=5972e7dc9af08e68dd3e4e51cd1706d6&keep_landing=1&" class="link-button">Accommodation Guide</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -118,9 +125,9 @@
             <div class="insurance-content">
                 <p>We recommend getting comprehensive travel insurance for your trip to Colombia.</p>
                 <div class="insurance-links">
-                    <a href="#" class="provider-link">World Nomads</a>
-                    <a href="#" class="provider-link">SafetyWing</a>
-                    <a href="#" class="provider-link">Allianz</a>
+                    <a href="https://www.worldnomads.com/ca-en/travel-insurance" class="provider-link">World Nomads</a>
+                    <a href="https://safetywing.com/" class="provider-link">safetyWing</a>
+                    <a href="https://www.travelinsurance.ca/en_CA.html?utm_source=google&utm_medium=cpc&utm_term=allianz&utm_campaign=EN_EN%20Brand&prof=5038&camp=76094&kct=google&kchid=16453&criteriaid=kwd-296063650762&campaignid=260429960&locphy=9000559&adgroupid=44650896682&adpos=&cid=701628086794&networkType=search&kdv=c&kext=&kadtype=&kmc=&kpid=&npclid=Cj0KCQiAi_G5BhDXARIsAN5SX7r6gOvrpdLzvQsoHiOzn-f7ioYnwyP1LEs8n_abiVe2BsPcQOwKzZEaAl8nEALw_wcB&gad_source=1&gclid=Cj0KCQiAi_G5BhDXARIsAN5SX7r6gOvrpdLzvQsoHiOzn-f7ioYnwyP1LEs8n_abiVe2BsPcQOwKzZEaAl8nEALw_wcB" class="provider-link">Allianz</a>
                 </div>
             </div>
         </section>
